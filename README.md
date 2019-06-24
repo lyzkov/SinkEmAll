@@ -2,17 +2,13 @@
 
 An error handling reactive extension for fine-grained control over Abort, Retry, Fail?
 
-[![CI Status](https://img.shields.io/travis/lyzkov/SinkEmAll.svg?style=flat)](https://travis-ci.org/lyzkov/SinkEmAll)
-[![Version](https://img.shields.io/cocoapods/v/SinkEmAll.svg?style=flat)](https://cocoapods.org/pods/SinkEmAll)
-[![License](https://img.shields.io/cocoapods/l/SinkEmAll.svg?style=flat)](https://cocoapods.org/pods/SinkEmAll)
-[![Platform](https://img.shields.io/cocoapods/p/SinkEmAll.svg?style=flat)](https://cocoapods.org/pods/SinkEmAll)
-
 > Battleship (also Battleships or Sea Battle) is a guessing game for two players. It is played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
 
 ## Usage
 
 SinkEmAll extends the way of handling errors in RxSwift. It brings (A)bort, (R)etry, (F)ail? pattern back to the game. Yes, that's the battleship game!
 
+```swift
     /// Definition of a single attempt of handling error.
     /// That's the battleship game: you can miss, hit, or sink on target.
     ///
@@ -24,9 +20,11 @@ SinkEmAll extends the way of handling errors in RxSwift. It brings (A)bort, (R)e
         case hit(Error)
         case sink
     }
+```
 
 Therefore, you can implement `ErrorShooting` protocol in order to take a single shot on target.
 
+```swift
     extension ViewController: ErrorShooting {
     
         func shoot(error: RetriableError, attempt: Int, complete: @escaping (Shot) -> Void) {
@@ -53,9 +51,11 @@ Therefore, you can implement `ErrorShooting` protocol in order to take a single 
         }
     
     }
+```
 
 Take note that shoot function is generic so another error type can be used.
 
+```swift
     class ConsoleErrorLogger: ErrorShooting {
     
         public let level: Level
@@ -72,20 +72,25 @@ Take note that shoot function is generic so another error type can be used.
         }
     
     }
+```
 
 After that you can use your instance as a shooter for reactive operator.
 
+```swift
     observableThatErrorsOut
         .shootError(with: viewController)
         .shootError(with: ConsoleErrorLogger(level: .debug))
+```
 
 Another example with custom shooter function:
 
+```swift
     observableThatErrorsOut
-    		.shootError { error, _ in
-    		    print("Sinking an error: \(error.localizedDescription)")
+    	.shootError { error, _ in
+            print("Sinking an error: \(error.localizedDescription)")
             return .just(.sink)
-         }
+        }
+```
 
 Please look at `ViewController.swift` file in example project for more examples.
 
@@ -104,7 +109,7 @@ To run the example project, clone the repo and run `pod install` from the Exampl
 
 ## Author
 
-lyzkov, lyzkov@gmail.com
+Piotr Boguslaw Łyczba, lyzkov@gmail.com
 
 ## License
 
