@@ -2,7 +2,7 @@
 
 # SinkEmAll
 
-An error handling reactive extension for fine-grained control over Abort, Retry, Fail?
+An error handling reactive extension for fine-grained control over [Abort, Retry, Fail?](https://en.wikipedia.org/wiki/Abort,_Retry,_Fail%3F)
 
 > Battleship (also Battleships or Sea Battle) is a guessing game for two players. It is played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
 
