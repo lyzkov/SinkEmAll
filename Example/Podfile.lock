@@ -1,0 +1,46 @@
+PODS:
+  - Nimble (7.3.4)
+  - Quick (2.1.0)
+  - RxBlocking (5.0.0):
+    - RxSwift (~> 5)
+  - RxNimble (4.5.0):
+    - RxNimble/RxBlocking (= 4.5.0)
+  - RxNimble/Core (4.5.0):
+    - Nimble (~> 7.0)
+    - RxSwift (~> 5.0)
+  - RxNimble/RxBlocking (4.5.0):
+    - RxBlocking
+    - RxNimble/Core
+  - RxSwift (5.0.0)
+  - SinkEmAll (0.1.0):
+    - RxSwift (~> 5)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - RxNimble
+  - SinkEmAll (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - RxBlocking
+    - RxNimble
+    - RxSwift
+
+EXTERNAL SOURCES:
+  SinkEmAll:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
+  RxNimble: 7de04a30b74ac4c9298ae819edbfbddc34abe7fc
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SinkEmAll: 8950092cbc560a7e4dd61be02bdb9d75fc17293a
+
+PODFILE CHECKSUM: 263c27bb395cc8bf8e664bf43b65be18947697c2
+
+COCOAPODS: 1.7.1
