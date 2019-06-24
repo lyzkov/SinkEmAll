@@ -1,3 +1,5 @@
+<img src="/logo_outlined.png" width="128">
+
 # SinkEmAll
 
 An error handling reactive extension for fine-grained control over Abort, Retry, Fail?
