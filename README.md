@@ -107,6 +107,7 @@ To run the example project, clone the repo and run `pod install` from the Exampl
 - [ ]  Wrap around the underlying error in some ship struct
 - [ ]  What about Result type?
 - [ ]  Add support for other reactive frameworks
+- [ ]  Add timeout
 
 [How to enjoy error handling in RxSwift](https://www.notion.so/56aed37191ef4fb28f420a1348a6d2fc)
 
