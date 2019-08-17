@@ -13,20 +13,6 @@ import RxNimble
 
 import SinkEmAll
 
-struct ErrorStub: Error {
-}
-
-struct AnotherErrorStub: Error, Equatable {
-}
-
-extension AnotherErrorStub: DescribableError {
-
-    func message(for level: Level) -> String? {
-        return "Error"
-    }
-
-}
-
 class RxErrorShootingSpec: QuickSpec {
 
     override func spec() {

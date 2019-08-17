@@ -1,4 +1,4 @@
-<img src="/logo_outlined.png" width="128">
+<img src="/Assets/logo_outlined.png" width="128">
 
 # SinkEmAll
 
@@ -106,11 +106,12 @@ To run the example project, clone the repo and run `pod install` from the Exampl
 - [ ]  Add miss, hit and sink hooks to error traits
 - [ ]  Wrap around the underlying error in some ship struct
 - [ ]  What about Result type?
+- [ ]  Add support for tvOS, watchOS and macOS deployment targets
 - [ ]  Add support for other reactive frameworks
 - [ ]  Add timeout
+- [ ]  Provide more examples
 - [ ]  Improve README.md by adding a diagram of shooting an error
-
-[How to enjoy error handling in RxSwift](https://www.notion.so/56aed37191ef4fb28f420a1348a6d2fc)
+- [ ]  [How to enjoy error handling in RxSwift](https://www.notion.so/56aed37191ef4fb28f420a1348a6d2fc)
 
 ## Author
 
